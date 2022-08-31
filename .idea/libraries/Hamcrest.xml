@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Hamcrest">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../Hamcrest" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../Hamcrest" recursive="false" />
+  </library>
+</component>

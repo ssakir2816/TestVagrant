@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>DemoProject</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <cucumber.version>2.4.0</cucumber.version>
+        <selenium.version>3.14.0</selenium.version>
+        <junit.version>4.12</junit.version>
+        <phantomjs.version>1.4.4</phantomjs.version>
+        <slf4jVersion>1.7.25</slf4jVersion>
+        <cucumber-jvm-deps>1.0.5</cucumber-jvm-deps>
+        <picocontainer>2.15</picocontainer>
+        <rest-assured>4.1.2</rest-assured>
+        <jackson-core>2.9.7</jackson-core>
+        <commons-io>2.6</commons-io>
+        <commons-lang>3.8.1</commons-lang>
+        <lombok>1.18.4</lombok>
+        <assertj-assert>3.11.1</assertj-assert>
+        <appium-java-client>6.1.0</appium-java-client>
+        <common-db-utils>1.6</common-db-utils>
+        <maven-surefire-plugin>2.22.1</maven-surefire-plugin>
+        <mojo-exec-maven-plugin>1.6.0</mojo-exec-maven-plugin>
+        <maven-resource-plugin>3.1.0</maven-resource-plugin>
+        <maven-compiler-plugin>3.8.0</maven-compiler-plugin>
+        <maven-cucumber-reporting>3.16.0</maven-cucumber-reporting>
+        <testng>6.14.3</testng>
+        <utf-8>UTF-8</utf-8>
+        <joda-time>2.5</joda-time>
+        <java-version>1.8</java-version>
+        <mysql>5.1.44</mysql>
+        <db2.version>1.4.2</db2.version>
+        <!-- 3.8.47 -->
+        <oracle.version>10.2.0.5</oracle.version>
+        <maven-install-plugin>3.3.9</maven-install-plugin>
+        <podam>6.0.2.RELEASE</podam>
+        <jsch-version>0.1.55</jsch-version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <dependencies>
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>4.8.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>4.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.1.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <scope>test</scope>
+            <version>4.2.0</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>2.4.0</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>2.4.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Cucumber -->
+        <!--Selenium Webdriver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io}</version>
+        </dependency>
+        <!--Commons-IO contains utility classes, stream implementations, file filter,-->
+
+        <!--Commons-lang3   a package of Java utility classes -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-assert}</version>
+        </dependency>
+
+
+
+
+
+
+
+
+    </dependencies>
+
+
+</project>
